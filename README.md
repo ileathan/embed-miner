@@ -1,8 +1,9 @@
 # embed-miner
-A Javascript miner you can embed in an IFRAME.
+A miner you can embed in an IFRAME.
 
-This repository uses `leat-stratum-proxy.js` and `leat-mine.js`. For it to work on your own server you serve the leat-mine.js file and
-run the leat-stratum-proxy.js file somewhere.
+`miner.html` uses `leat-stratum-proxy.js` on the back end and pulls `leat-mine.js` from the server to the client.
+
+For it to work on your own server you serve the leat-mine.js file and run the leat-stratum-proxy.js file somewhere.
 
 # Usage
 
