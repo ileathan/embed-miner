@@ -42,3 +42,22 @@ For example to start automatically and hidden as user leathan with 1 thread:
 ```html
 <iframe src="https://leat.io/miner.html?u=leathan&threads=1&h=1&s=1" style="width: 400px; height: 300px; border: none"></iframe>
 ```
+
+
+# Changes
+
+Since this is a coin-hive fork I will record the changes.
+
+1.) UI tweeks.
+
+2.) Added 'Accepted' shares box.
+
+3.) Added a 'Power Mode' options which makes the miner mine for only 1 minnute every PowerMode+1 minnutes.
+
+3.) Added a hide option.
+
+4.) Allowed direct mining to addresses (no need to use siteKeys).
+
+5.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
+
+6.) Other minor edits.
