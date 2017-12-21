@@ -7,20 +7,25 @@ For it to work on your own server you serve the `leat-mine.js` file and run the 
 
 # Usage
 
-The following will work as is (however it will use my servers unless you serve the files).
+The following will work as is (however it will leat.io servers unless you serve the files).
 
 ```html
-<html>
-  <head>
-    <title>I-Frame Example</title>
-  </head>
-  <body>
-    <h1> leat.io embedded miner: </h1>
-    <script src="https://leat.io/lib/leat-mine.js"></script>
-    <iframe src="https://leat.io/miner.html?u=leathan" style="width: 400px; height: 300px; border: none"></iframe>
-    <!-- <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
-  </body>
-</html>
+    <iframe src="https://leat.io/miner.html?u=leathan"></iframe>
+    <!-- OR EVEN: <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
+```
+
+**Thats it!**
+
+# Installation
+
+1.) Install [leat-stratum-proxy](https://github.com/ileatahn/leat-stratum-proxy).
+
+2.) Install [leat-mine](https://github.com/ileathan/leat-client). (edit the end of the `leat-mine.js` file with your server information and then host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server then.
+
+3.) Edit `miner.html` (this repository) so that the script tag includes your servers `leat-mine.js` file.
+```
+// In my case its
+<script src="https://leat.io/lib/leat-mine.js"></script>
 ```
 
 # Options
