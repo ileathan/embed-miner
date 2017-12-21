@@ -215,7 +215,7 @@
 
 <div class="box">
 	<h2>Accepted</h2>
-	<span class="value" id="hashes-accepted">0</span>
+	<span class="value" style="color:green" id="hashes-accepted">0</span>
 </div>
 
 <div class="box controls">
@@ -274,36 +274,46 @@
 		leat.io
 	</a>
 
-<div style="float:right; display:inline-block">
-	<a href="#" onclick="event.preventDefault(); document.getElementById('miner').style.display = 'none'">
-  &nbsp;&nbsp;[ x ]
-	</a>
-</div>
+  <div style="float:right; display:inline-block">
+	  <a href="#" onclick="event.preventDefault(); document.getElementById('miner').style.display = 'none'">
+    &nbsp;[ x ]
+	  </a>
+  </div>
+  <span style="float: left; font-family: cursive; color: #556A7F" id="user-name"></span>
 
 </div>
 
 
 
 
-<script type="text/javascript" src="https://leat.io/lib/leat-mine.js"></script>
+<script type="text/javascript" src="https://leat.io/lib/leat-mine.min.js"></script>
 <script type="text/javascript">
+  hrefString = window.location.href;
 	var queryParam = function(name) {
 		var results = new RegExp(
 			"[?&]"
 			+ name.replace(/[\[\]]/g, "\\$&") +
 			"(=([^&#]*)|&|#|$)"
-		).exec(window.location.href);
+		).exec(hrefString);
 		if (!results) { return null };
 		if (!results[2]) { return '' };
 		return decodeURIComponent(results[2].replace(/\+/g, " "));
 	};
 
-	// Load address and optional user name
+  if(!queryParam('p') && !queryParam('preserve'))
+    window.history.pushState({}, "", "/m")
+  ;
 	var address = queryParam('address') || queryParam('a');
-	var userName = queryParam('user') || queryParam('u') || '_anon';
+	var userName = queryParam('user') || queryParam('u');
 
-	// Hide logo, if whitelabel
-	if (queryParam('logo')) {
+  userName ?
+    document.getElementById('user-name').textContent = userName
+  :
+    userName = '_anon';
+  ;
+
+	// Hide logo, if logo option is specified
+	if (queryParam('hidelogo') || queryParam('hl')) {
 		document.getElementById('branding').style.display = 'none';
 	}
 	var hide = queryParam('hide') || queryParam('h');;
@@ -589,10 +599,10 @@
 		container: document.getElementById('miner'),
 		canvas: document.getElementById('graph-canvas'),
 		hashesPerSecond: document.getElementById('hashes-per-second'),
-	  hashesAccepted: document.getElementById('hashes-accepted'),
+	  	hashesAccepted: document.getElementById('hashes-accepted'),
 		powerMode: document.getElementById('power-mode'),
-	  powerModeUp: document.getElementById('power-mode-up'),
-	  powerModeDown: document.getElementById('power-mode-down'),
+	  	powerModeUp: document.getElementById('power-mode-up'),
+	  	powerModeDown: document.getElementById('power-mode-down'),
 		threads: document.getElementById('threads'),
 		threadsAdd: document.getElementById('threads-add'),
 		threadsRemove: document.getElementById('threads-remove'),
