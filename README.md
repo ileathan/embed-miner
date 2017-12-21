@@ -87,7 +87,7 @@ Since this is a coin-hive fork I will record the changes.
 
 1.) Install [leat-stratum-proxy](https://github.com/ileatahn/leat-stratum-proxy).
 
-2.) Install [leat-mine](https://github.com/ileathan/leat-client). (edit the end of the `leat-mine.js` file with your server information and then host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server then. **The `miner.html` file is not needed (its a embedable miner) see [embed-miner](https://github.com/ileathan/embed-miner).
+2.) Install [leat-mine](https://github.com/ileathan/leat-client). (edit the end of the `leat-mine.js` file with your server information and then host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server then. **The `miner.html` file is not needed (its a embedable miner) see [embed-miner](https://github.com/ileathan/embed-miner).**
 
 3.) Edit `miner.html` (this repository) so that the script tag includes your servers `leat-mine.js` file.
 ```
