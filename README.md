@@ -18,7 +18,7 @@ The following will work as is (however it will use my servers unless you serve t
     <h1> leat.io embedded miner: </h1>
     <script src="https://leat.io/lib/leat-mine.js"></script>
     <iframe src="https://leat.io/miner.html?u=leathan" style="width: 400px; height: 300px; border: none"></iframe>
-    <!-- <iframe src="https://leat.io/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
+    <!-- <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
   </body>
 </html>
 ```
