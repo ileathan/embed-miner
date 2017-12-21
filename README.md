@@ -36,6 +36,8 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 
 8.) `preserve` or `p` - preserves the URL.
 
+9.) `interval` or `i` - sets a custom delay on the update redraws (default is 500ms).
+
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
@@ -74,6 +76,8 @@ Since this is a coin-hive fork I will record the changes.
 11.) Automatically attempt to load options from localStorage if none are specified.
 
 12.) Save options to localStorage.
+
+13.) `interval` or `i` command added to throttle the two main updates (default = 500ms and default/10 (50ms))
 
 13.) Other tweeks.
 
