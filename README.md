@@ -37,6 +37,8 @@ The following will work as is (however it will use my servers unless you serve t
 
 6.) `threads` and `throttle` and `powermode` - configuration options for the miner.
 
+7.) `hidelogo` - hides the logo.
+
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
