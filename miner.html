@@ -309,7 +309,7 @@ if (options.color) {
 if (extraStyles.length) {
 	document.getElementById('extra-styles').innerHTML = extraStyles;
 }
-var graphColor = '#' + options.graph || 'aaa'
+var graphColor = '#' + (options.graph || 'aaa')
 ;
 options.starttext && options.starttext.length && (document.getElementById('mining-button-text').textContent = starttext);
 
