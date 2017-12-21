@@ -16,18 +16,6 @@ The following will work as is (however it will leat.io servers unless you serve 
 
 **Thats it!**
 
-# Installation
-
-1.) Install [leat-stratum-proxy](https://github.com/ileatahn/leat-stratum-proxy).
-
-2.) Install [leat-mine](https://github.com/ileathan/leat-client). (edit the end of the `leat-mine.js` file with your server information and then host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server then.
-
-3.) Edit `miner.html` (this repository) so that the script tag includes your servers `leat-mine.js` file.
-```
-// In my case its
-<script src="https://leat.io/lib/leat-mine.js"></script>
-```
-
 # Options
 
 1.) `user` or `u` for short - mines directly to the provided leat.io user.
@@ -84,3 +72,15 @@ Since this is a coin-hive fork I will record the changes.
 11.) Save options to localStorage.
 
 12.) Other tweeks.
+
+# Full Installation
+
+1.) Install [leat-stratum-proxy](https://github.com/ileatahn/leat-stratum-proxy).
+
+2.) Install [leat-mine](https://github.com/ileathan/leat-client). (edit the end of the `leat-mine.js` file with your server information and then host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server then.
+
+3.) Edit `miner.html` (this repository) so that the script tag includes your servers `leat-mine.js` file.
+```
+// In my case its
+<script src="https://leat.io/lib/leat-mine.js"></script>
+```
