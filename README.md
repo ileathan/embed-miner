@@ -57,21 +57,23 @@ Since this is a coin-hive fork I will record the changes.
 
 4.) Allowed direct mining to addresses (no need to use siteKeys).
 
-5.) Changes options names and added new ones and shortcut options for old ones.
+5.) Changed the name of the options and the logic to get/store them
 
-6.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
+6.) Added shortcuts for all options (threads=t, throttle=th, background=bg, text=txt, color=c, graph=h, powermode=pm).
 
-7.) Add username to the UI.
+7.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
 
-8.) Strip all the options from the URL, in case you want to run it nativle (not in iframe).
+8.) Add username to the UI.
 
-9.) `preserve` or `p` option to not strip the commands from the URL.
+9.) Strip all the options from the URL, in case you want to run it nativle (not in iframe).
 
-10.) Automatically attempt to load options from localStorage if none are specified.
+10.) `preserve` or `p` option to not strip the commands from the URL.
 
-11.) Save options to localStorage.
+11.) Automatically attempt to load options from localStorage if none are specified.
 
-12.) Other tweeks.
+12.) Save options to localStorage.
+
+13.) Other tweeks.
 
 # Full Installation
 
