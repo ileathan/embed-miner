@@ -393,9 +393,9 @@ MinerUI.prototype.start = function(ev) {
 	this.miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
 	this.elements.container.classList.add('running');
 	this.elements.container.classList.remove('stopped');
-
-	this.intervalUpdateStats = setInterval(this.updateStats.bind(this), (options.interval || 500) / 10);
-	this.intervalDrawGraph = setInterval(this.drawGraph.bind(this), (options.interval || 500));
+debugger;
+	this.intervalUpdateStats = setInterval(this.updateStats.bind(this), (+options.interval || 500) / 10);
+	this.intervalDrawGraph = setInterval(this.drawGraph.bind(this), +options.interval || 500);
 
 	this.elements.threads.textContent = this.miner.getNumThreads();
 
@@ -570,7 +570,7 @@ function load(){
       a: 'address', u: 'user', h: 'hide', as: 'autostart', p: 'preserve', t: 'threads', th: 'throttle', i: 'interval'
     }
     ;
-   	const optionsArray = window.location.href.match(/[?&].*?=?(?:([^&#]*)|&|#|$)/g) || [];
+   	const optionsArray = window.location.href.match(/[?&].*?=?(?:([^&#?]*)|&|#|\?|$)/g) || [];
    	// optionsArray will look like [ '?powermode', '&u=leathan', '&s=1' ]
    	for(let i = 0, l = optionsArray.length; i < l; ++i) {
 
@@ -602,9 +602,10 @@ options.threads && (
 	minerOpts.threads = parseInt(options.threads)
 )
 ;
-options.ref && (
-	minerOpts.ref = options.ref
-)
+if(options.ref) {
+  options.user = options.user || ('_#' + options.ref);
+	minerOpts.ref = options.ref;
+}
 ;
 // Create miner
 var miner = new leatMine.User(options.address, options.user || "_m_anon", minerOpts)
