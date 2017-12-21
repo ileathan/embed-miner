@@ -14,6 +14,8 @@ The following will work as is (however it will leat.io servers unless you serve 
     <!-- OR EVEN: <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
 ```
 
+See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leathan.xyz/html/iframe-miner.html).
+
 **Thats it!**
 
 # Options
