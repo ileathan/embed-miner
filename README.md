@@ -81,7 +81,7 @@ Since this is a coin-hive fork I will record the changes.
 
 13.) `interval` or `i` command added to throttle the two main updates (default = 500ms and default/10 (50ms))
 
-13.) Other tweeks.
+13.) Other tweeks. (which constantly are related to getting around antivirus's/adblocker).
 
 # Full Installation
 
