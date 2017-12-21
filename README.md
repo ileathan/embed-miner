@@ -10,7 +10,7 @@ For it to work on your own server you serve the `leat-mine.js` file and run the 
 The following will work as is (however it will leat.io servers unless you serve the files).
 
 ```html
-    <iframe src="https://leat.io/miner.html?u=leathan"></iframe>
+    <iframe src="https://leat.io/miner.html?u=leathan" width="400px" height="300px"></iframe>
     <!-- OR EVEN: <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
 ```
 
