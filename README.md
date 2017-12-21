@@ -58,6 +58,14 @@ Since this is a coin-hive fork I will record the changes.
 
 4.) Allowed direct mining to addresses (no need to use siteKeys).
 
-5.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
+5.) Changes options names and added new ones and shortcut options for old ones.
 
-6.) Other minor edits.
+6.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
+
+7.) Add username to the UI.
+
+8.) Strip all the commands from the URI, in case you want to run it nativle (not in iframe).
+
+9.) `preserve` or `p` option to not strip the commands from the URI.
+
+10.) Other miner tweeks.
