@@ -39,6 +39,8 @@ The following will work as is (however it will use my servers unless you serve t
 
 7.) `hidelogo` or `hl` - hides the logo.
 
+8.) `preserve` or `p` - preserves the URL.
+
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
@@ -49,6 +51,8 @@ For example to start automatically and hidden as user leathan with 1 thread:
 # Changes
 
 Since this is a coin-hive fork I will record the changes.
+
+0.) Refactored the code.
 
 1.) UI tweeks.
 
@@ -66,8 +70,12 @@ Since this is a coin-hive fork I will record the changes.
 
 7.) Add username to the UI.
 
-8.) Strip all the commands from the URI, in case you want to run it nativle (not in iframe).
+8.) Strip all the options from the URL, in case you want to run it nativle (not in iframe).
 
-9.) `preserve` or `p` option to not strip the commands from the URI.
+9.) `preserve` or `p` option to not strip the commands from the URL.
 
-10.) Other miner tweeks.
+10.) Automatically attempt to load options from localStorage if none are specified.
+
+11.) Save options to localStorage.
+
+12.) Other tweeks.
