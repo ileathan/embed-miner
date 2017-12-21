@@ -266,7 +266,7 @@
 	</a>
 
   <div style="float:right; display:inline-block">
-	  <a href="#" onclick="event.preventDefault(); hide();">
+	  <a href="#" onclick="event.preventDefault(); hideMiner();">
     &nbsp;[ x ]
 	  </a>
   </div>
@@ -609,7 +609,7 @@ if (queryParam('autostart') == 1) {
 	ui.start();
 }
 document.addEventListener("touchstart", function(){}, true);
-function hide() {
+function hideMiner() {
   delete ui.elements;
   delete ui.graphColors;
   document.body.parentElement.removeChild(document.body);
