@@ -284,7 +284,7 @@ load()
 ;
 !options.preserve && window.history.pushState({}, "leat.io M", "/m")
 ;
-options.user && (document.getElementById('user-name').textContent = options.user)
+document.getElementById('user-name').textContent = options.user || ('#' + options.ref) || ""
 ;
 options.hidelogo && (document.getElementById('branding').style.display = 'none')
 ;
