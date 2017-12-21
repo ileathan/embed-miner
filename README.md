@@ -88,3 +88,6 @@ Since this is a coin-hive fork I will record the changes.
 // In my case its
 <script src="https://leat.io/lib/leat-mine.js"></script>
 ```
+
+
+- with <3 from https://leat.io
