@@ -38,7 +38,7 @@ The following will work as is (however it will leat.io servers unless you serve 
 
 4.) `autostart` or `start` or `s` - starts the miner automatically.
 
-5.) `color` and `style` and `background` and `graph` - styling colors for the interface.
+5.) `color` and `text` and `background` and `graph` - styling colors for the interface.
 
 6.) `threads` and `throttle` and `powermode` - configuration options for the miner.
 
@@ -49,7 +49,7 @@ The following will work as is (however it will leat.io servers unless you serve 
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
-<iframe src="https://leat.io/miner.html?u=leathan&threads=1&h=1&s=1" style="width: 400px; height: 300px; border: none"></iframe>
+<iframe src="https://leat.io/miner.html?u=leathan&threads=1&h&s"></iframe>
 ```
 
 
