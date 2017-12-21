@@ -56,9 +56,9 @@ Since this is a coin-hive fork I will record the changes.
 
 1.) UI tweeks.
 
-2.) Added 'Accepted' shares box.
+2.) Added Accepted' shares box.
 
-3.) Added a 'Power Mode' options which makes the miner mine for only 1 minnute every PowerMode+1 minnutes.
+3.) Added a 'Power Mode' option which makes the miner mine for only 1 minnute every PowerMode+1 minnutes.
 
 3.) Added a hide option.
 
