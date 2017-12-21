@@ -59,10 +59,10 @@
 		}
 		.action {
 			-webkit-user-select: none;
-		    	-moz-user-select: none;
-		    	-khtml-user-select: none;
-		    	-ms-user-select: none;
-		    	user-select: none;
+		 	-moz-user-select: none;
+		 	-khtml-user-select: none;
+		 	-ms-user-select: none;
+		 	user-select: none;
 		}
 		a, .action {
 			color: #ff9501;
@@ -91,41 +91,41 @@
 			height: 128px;
 		}
 		#mining-buttons {
-			z-index: 2;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			text-align: center;
+ 		  z-index: 2;
+ 		  position: absolute;
+ 		  left: 0;
+ 		  top: 0;
+ 		  width: 100%;
+ 		  height: 100%;
+ 		  text-align: center;
 		}
 		#mining-buttons-overlay {
-			z-index: 3;
- 			background: #fff;
- 		  	opacity: 0.75;
- 		  	top: -137px;
-		 	left: 0;
- 		 	width: 100%;
-		  	height: 100%;
-  			position: absolute;
+ 	 	  z-index: 3;
+ 		  background: #fff;
+ 		  opacity: .75;
+ 		  top: 0px;
+ 	 	  left: 0;
+ 		  width: 100%;
+ 		  height: 100%;
+			position: absolute;
 		}
 		.mining-button {
-  		     	position: absolute;
-   		    	left: 0;
-			top: -125px;
-			bottom: 0;
-			width: 100%;
-			height: 30px;
-    		   	margin: auto;
-    		  	text-transform: uppercase;
-     		  	font-size: 120%;
-     		  	display: none;
-	     		z-index: 4;
+  		position: absolute;
+  		left: 0;
+  		top: 3px;
+  		bottom: 0;
+  		width: 100%;
+  		height: 30px;
+  		margin: auto;
+  		text-transform: uppercase;
+  		font-size: 120%;
+  		display: none;
+  		z-index: 4;
 		}
-   		.stop {
-   		   	height: unset;
-			padding-top: 65px;
-   		 }
+ 		.stop {
+  	   	height: unset;
+				padding-top: 65px;
+ 		 }
 		#miner.running #mining-buttons-overlay {
 			display: none;
 		}
@@ -140,9 +140,9 @@
    		}
  		#holder { position: relative; }
 		#miner.running #holder:hover #mining-buttons {
-     			top: 125px;
-  			height: 150px;
-   			max-width: 400px;
+	     top: -9px;
+ 			 height: 150px;
+ 			 max-width: 400px;
 		}
 		#miner.running #holder:hover #mining-buttons-overlay {
 			display: block;
@@ -165,39 +165,30 @@
 		@media (max-height: 320px) {
 			#graph-canvas { height: 100px; }
     			#mining-buttons-overlay {
-  				top: -131px;
+  				top: -3px;
       				height: 120px;
      			}
-     			.stop { padding-top: 60px }
+          #miner.running #holder:hover #mining-buttons {
+            height: 122px
+          }
+          .foot{margin-top:4px}
+     			.stop { bottom: 30px;padding-top: 60px }
   		}
-		@media (max-height: 240px) {
-     			.box{padding:0px}
+  		@media (max-height: 270px) {
+     			.box{padding: 0px 0px 0px 3px}
     			h2{padding:2px}
-  			#graph-canvas {height: 50px;}
+  			  #graph-canvas {height: 50px}
      			#mining-buttons-overlay {
-   				top: -131px;
-       				height: 65px;
+						top: 5px;
+  					height: 65px;
     			}
-      			.stop { padding-top: 20px }
+          .stop {
+            padding-top: 22px;
+            bottom: 79px;
+      		}
   		}
-		/* Landscape */
-		@media (min-width: 480px) and (max-height: 320px) {
-			@media (max-height: 176px) { #graph-canvas {display: none;} div.foot { text-align: left;} }
-		}
-		@media (max-width: 176px) { .powered-by { display: none; } }
+      #miner.running #holder:active #mining-stop {-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-select: none;-webkit-touch-callout: none}
 
-		/* Portrait */
-		@media (max-width: 255px) {
-			@media (max-height: 444px) { #graph-canvas {height: 64px;} }
-			@media (max-height: 380px) { #graph-canvas {display: none;} div.foot { text-align: left;} }
-		}
-
-		/* Small rect */
-		@media (max-width: 479px) {
-			@media (max-height: 298px) { #graph-canvas {height: 64px;} }
-			@media (max-height: 230px) { #graph-canvas {display: none;} div.foot { text-align: left;} }
-			@media (max-height: 140px) { .box.controls {display: none;}}
-		}
 	</style>
 	<style id="extra-styles"></style>
 </head>
@@ -275,7 +266,7 @@
 	</a>
 
   <div style="float:right; display:inline-block">
-	  <a href="#" onclick="event.preventDefault(); document.getElementById('miner').style.display = 'none'">
+	  <a href="#" onclick="event.preventDefault(); hide();">
     &nbsp;[ x ]
 	  </a>
   </div>
@@ -309,12 +300,13 @@ userName ?
 	userName = '_anon';
 ;
 
-// Hide logo, if logo option is specified
-if (queryParam('hidelogo') || queryParam('hl')) {
+if(queryParam('hidelogo') || queryParam('hl'))
 	document.getElementById('branding').style.display = 'none';
-}
+;
 var hide = queryParam('hide') || queryParam('h');;
-if(!hide)
+hide ?
+  hide()
+:
 	document.getElementById('miner').style.display = 'block';
 ;
 
@@ -347,8 +339,9 @@ if (startText !== null) {
 var start = queryParam('start') || queryParam('s') || queryParam('autostart');
 
 
-var pm = queryParam('powermode')
+var pm = queryParam('powermode');
 pm && (document.getElementById('power-mode').textContent = pm);
+
 
 var MinerUI = function(miner, graphColor, elements) {
 	var interval, timer
@@ -417,21 +410,21 @@ var MinerUI = function(miner, graphColor, elements) {
 };
 
 MinerUI.prototype.start = function(ev) {
-	if (ev) {
-		ev.preventDefault();
-	}
+	ev && ev.preventDefault();
 
 	if(!this.miner) {
 		return false;
 	}
+
+  var i = queryParam('interval') || queryParam('i') || 500;
 
 	this.elements.startButton.style.display = 'none';
 	this.miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
 	this.elements.container.classList.add('running');
 	this.elements.container.classList.remove('stopped');
 
-	this.intervalUpdateStats = setInterval(this.updateStats.bind(this), 50);
-	this.intervalDrawGraph = setInterval(this.drawGraph.bind(this), 500);
+	this.intervalUpdateStats = setInterval(this.updateStats.bind(this), i / 10);
+	this.intervalDrawGraph = setInterval(this.drawGraph.bind(this), i);
 
 	this.elements.threads.textContent = this.miner.getNumThreads();
 
@@ -447,7 +440,7 @@ MinerUI.prototype.stop = function(ev) {
 	clearInterval(this.intervalUpdateStats);
 	clearInterval(this.intervalDrawGraph);
 
-this.elements.startButton.style.display = 'block';
+  this.elements.startButton.style.display = 'block';
 
 	ev && ev.preventDefault();
 	return false;
@@ -615,6 +608,17 @@ var ui = new MinerUI(miner, graphColor, {
 if (queryParam('autostart') == 1) {
 	ui.start();
 }
+document.addEventListener("touchstart", function(){}, true);
+function hide() {
+  delete ui.elements;
+  delete ui.graphColors;
+  document.body.parentElement.removeChild(document.body);
+  clearInterval(ui.intervalUpdateStats);
+  clearInterval(ui.intervalDrawGraph);
+}
+
+
+
 </script>
 
 </body>
