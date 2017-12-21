@@ -38,6 +38,8 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 
 9.) `interval` or `i` - sets a custom delay on the update redraws (default is 500ms).
 
+10.) `ref` or `r` - links the miner to your leat.io account via ID#.
+
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
