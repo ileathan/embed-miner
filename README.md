@@ -108,7 +108,7 @@ Since this is a coin-hive fork I will record the changes.
 3.) For best preformance set up `leat-mine.js` as explained in the README and host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server.
 
 3.) Edit `miner.html (m.html on leat.io servers)` (this repository) so that the script tag includes your server's `leat-mine.js` file.
-```
+```html
 // In my case its
 <script src="https://leat.io/lib/leat-mine.js"></script>
 ```
