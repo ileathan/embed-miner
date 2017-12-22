@@ -3,7 +3,7 @@ A miner you can embed in an IFRAME.
 
 `miner.html` uses `leat-stratum-proxy.js` on the back end and pulls `leat-mine.js` from the server to the client.
 
-For it to work on your own server you serve the `leat-mine.js` file and run the `leat-stratum-proxy.js` file somewhere.
+For it to work on your own server ysee the full installation section bellow, and read every README.
 
 # Usage
 
