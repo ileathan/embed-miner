@@ -77,6 +77,8 @@ Since this is a coin-hive fork I will record the changes.
 
 10.) Added `preserve` or `p` option to not strip the commands from the URL.
 
+10.) Added `hide` or `h` command to hide the miner, in case you dont want people to know.
+
 11.) Added automatically attempt to load options from localStorage if none are specified.
 
 12.) Added saveing options to localStorage.
