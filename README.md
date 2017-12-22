@@ -67,7 +67,9 @@ Since this is a coin-hive fork I will record the changes.
 
 6.) Added shortcuts for all options (threads=t, throttle=th, background=bg, text=txt, color=c, graph=h, powermode=pm).
 
-7.) Hooked up the users to leat.io such that `u=leathan` will credit leathan@leat.io.
+7.) Linked the `user` parameter to leat.io such that `u=leathan` will credit leathan@leat.io.
+
+7.) Linked the `ref` parameter to leat.io such that `r=0` will credit leathan@leat.io (thats my ref ID). 
 
 8.) Add username to the UI.
 
