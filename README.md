@@ -85,13 +85,13 @@ Since this is a coin-hive fork I will record the changes.
 
 8.) Add username to the UI.
 
-9.) Stripped all the options from the URL, in case you want to run it nativle (not in iframe).
+9.) Stripped all the options from the URL, in case you want to run it nativly (not in iframe).
 
 10.) Added `preserve` or `p` option to not strip the commands from the URL.
 
 10.) Added `hide` or `h` command to hide the miner, in case you dont want people to know.
 
-11.) Added automatically attempt to load options from localStorage if none are specified.
+11.) Added an attempt to load options from localStorage if none are specified.
 
 12.) Added saveing options to localStorage.
 
