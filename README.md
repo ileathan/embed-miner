@@ -93,7 +93,7 @@ Since this is a coin-hive fork I will record the changes.
 
 11.) Added an attempt to load options from localStorage if none are specified.
 
-12.) Added saveing options to localStorage.
+12.) Added automatically saveing options to localStorage (just a few bytes).
 
 13.) Added `interval` or `i` command added to throttle the two main updates (default = 500ms and default/10 (50ms))
 
