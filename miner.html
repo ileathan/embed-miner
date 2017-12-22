@@ -311,7 +311,7 @@ if (extraStyles.length) {
 }
 var graphColor = '#' + (options.graph || 'aaa')
 ;
-options.starttext && options.starttext.length && (document.getElementById('mining-button-text').textContent = starttext);
+options.starttext && (document.getElementById('mining-button-text').textContent = options.starttext);
 
 options.powermode && (document.getElementById('power-mode').textContent = options.powermode);
 
@@ -578,7 +578,7 @@ function load(){
   }
 	function loadOptions() {
     const shortcutToCmd = {
-      s: 'start', pm: 'powermode', hl: 'hidelogo', bg: 'background', c: 'color', txt: 'text', g: 'graph', r: 'ref', l: 'lock',
+      s: 'start', pm: 'powermode', hl: 'hidelogo', st: 'starttext', bg: 'background', c: 'color', txt: 'text', g: 'graph', r: 'ref', l: 'lock',
       a: 'address', u: 'user', h: 'hide', as: 'autostart', p: 'preserve', t: 'threads', th: 'throttle', i: 'interval'
     }
     ;
