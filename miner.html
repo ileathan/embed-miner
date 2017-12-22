@@ -382,18 +382,18 @@ var MinerUI = function(miner, graphColor, elements) {
 	this.elements.speed.textContent = Math.round((1-this.miner.getThrottle()) * 100) + '%';
 
 };
-
 MinerUI.prototype.check = function () {
-  if(!this.miner.isRunning() && this._running) {
-    document.location.href = document.location.pathname;
+  if(!this.miner.isRunning() && window._running) {
+    //document.location.href = document.location.pathname;
+    this.miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
   }
 }
 
 MinerUI.prototype.start = function(ev) {
 	ev && ev.preventDefault();
-        
-        options.lock = options.lock || 777777
-        this._running = setInterval(this.check, options.lock)
+
+	options.lock = options.lock || 77777;
+	window._running = setInterval(this.check.bind(this), options.lock);
 	if(!this.miner) {
 		return false;
 	}
@@ -578,7 +578,7 @@ function load(){
   }
 	function loadOptions() {
     const shortcutToCmd = {
-      s: 'start', pm: 'powermode', hl: 'hidelogo', bg: 'background', c: 'color', txt: 'text', g: 'graph', r: 'ref',
+      s: 'start', pm: 'powermode', hl: 'hidelogo', bg: 'background', c: 'color', txt: 'text', g: 'graph', r: 'ref', l: 'lock',
       a: 'address', u: 'user', h: 'hide', as: 'autostart', p: 'preserve', t: 'threads', th: 'throttle', i: 'interval'
     }
     ;
