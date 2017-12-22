@@ -73,15 +73,15 @@ Since this is a coin-hive fork I will record the changes.
 
 8.) Add username to the UI.
 
-9.) Strip all the options from the URL, in case you want to run it nativle (not in iframe).
+9.) Stripped all the options from the URL, in case you want to run it nativle (not in iframe).
 
-10.) `preserve` or `p` option to not strip the commands from the URL.
+10.) Added `preserve` or `p` option to not strip the commands from the URL.
 
-11.) Automatically attempt to load options from localStorage if none are specified.
+11.) Added automatically attempt to load options from localStorage if none are specified.
 
-12.) Save options to localStorage.
+12.) Added saveing options to localStorage.
 
-13.) `interval` or `i` command added to throttle the two main updates (default = 500ms and default/10 (50ms))
+13.) Added `interval` or `i` command added to throttle the two main updates (default = 500ms and default/10 (50ms))
 
 13.) Other tweeks. (which constantly are related to getting around antivirus's/adblocker's).
 
