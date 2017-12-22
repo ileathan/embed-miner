@@ -100,4 +100,6 @@ Since this is a coin-hive fork I will record the changes.
 ```
 
 
+
+---------------------------------------------------------------
 - with <3 from https://leat.io
