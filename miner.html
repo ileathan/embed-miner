@@ -320,12 +320,13 @@ var MinerUI = function(miner, graphColor, elements) {
 	var interval, timer
 	;
 	const powerMode = x => {
-    if(!x)
-		this._powerMode = (+x || 0) + 1;
+    if(x === 0) {
+      clearInterval(interval);
+      clearTimeout(timer);
+      return this._powerMode = 0;
+    }
+		this._powerMode = (+x || 0);
 		clearInterval(interval);
-		if(+x === 0)
-			return
-		;
 		miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
 		interval = setInterval(()=> {
 			miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
@@ -333,7 +334,7 @@ var MinerUI = function(miner, graphColor, elements) {
 			timer = setTimeout(()=> {
 				miner.stop();
 			}, 6e4);
-		}, (this._powerMode) * 6e4);
+		}, (this._powerMode) * 6e4 + 6e4);
 	}
 	;
 	Object.defineProperty(this, 'powerMode', {
@@ -393,7 +394,6 @@ MinerUI.prototype.start = function(ev) {
 	this.miner.start(leatMine.FORCE_EXCLUSIVE_TAB);
 	this.elements.container.classList.add('running');
 	this.elements.container.classList.remove('stopped');
-debugger;
 	this.intervalUpdateStats = setInterval(this.updateStats.bind(this), (+options.interval || 500) / 10);
 	this.intervalDrawGraph = setInterval(this.drawGraph.bind(this), +options.interval || 500);
 
@@ -460,7 +460,7 @@ MinerUI.prototype.powerModeUp = function(ev) {
 	this.powerMode === 100 ?
 		this.powerMode = 0
 	:
-		this.powerMode = +this.powerMode + 1
+		this.powerMode = (+this.powerMode || 0) + 1
 	;
 	this.elements.powerMode.textContent = this.powerMode;
 	this.storeDefaults();
