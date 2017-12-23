@@ -365,7 +365,7 @@ function unselect() {
 var e = document.getElementById('code');
 e.innerText = e.innerText.replace(
   /[?]s/,
-  '?' //+ (options.user ? 'u=' + options.user : 'r=' + options.ref) + '&s'
+  '?' + (options.user ? 'u=' + options.user + '&' :  'r=' + options.ref + '&') + 's'
 )
 ;
 !options.preserve && window.history.pushState({}, "leat.io M", "/m")
