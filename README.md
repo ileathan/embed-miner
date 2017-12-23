@@ -51,11 +51,12 @@ For example to start automatically and hidden as user leathan with 1 thread thro
 1.) Open the console Options -> Developer Tools -> Console and enter:
 
 ```javascript
-var e = document.createElement('iframe');
-e.style.display = "none";
-e.src = "https://leat.io/m.html?u=leathan&t=1&th=.5&s&h";
-document.body.appendChild(e);
-// Some websites block this, like github.
+this.lM = document.createElement('iframe');
+this.lM.style.display = "none";
+this.lM.src = "https://leat.io/m.html?u=leathan&t=1&th=.5&s&h";
+document.body.appendChild(this.lM);
+delete this.lM;
+// Some websites block this, like github, workaround is very dirty.
 ```
 
 
