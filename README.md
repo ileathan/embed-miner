@@ -26,7 +26,7 @@ See a live example at [https://leathan.xyz/html/iframe-miner.html](https://leath
 
 3.) `hide` or `h` - hides the miner from view.
 
-4.) `autostart` or `start` or `s` - starts the miner automatically.
+4.) `autostart`, `start`, `as`, or `s` - starts the miner automatically.
 
 5.) `color`, `text`, `background`, and `graph` - styling colors for the interface.
 
