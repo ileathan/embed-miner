@@ -1,9 +1,9 @@
 # embed-miner
 A miner you can embed in an IFRAME.
 
-`miner.html` uses `leat-stratum-proxy.js` on the back end and pulls `leat-mine.js` from the server to the client.
+`miner.html` uses `leat-stratum-proxy.js` on the back end and pulls `leat-mine.min.js` from the server to the client.
 
-For it to work on your own server ysee the full installation section bellow, and read every README.
+For it to work on your own server see the full installation section bellow.
 
 # Usage
 
@@ -106,12 +106,12 @@ Since this is a coin-hive fork I will record the changes.
 
 2.) Install [leat-client](https://github.com/ileathan/leat-client).
 
-3.) For best preformance set up `leat-mine.js` as explained in the README and host `leathash.wasm`, `leathash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.js` on your server.
+3.) For best preformance set up `leat-mine.min.js` as explained in the README and host `leathanhash.wasm`, `leathanhash-asmjs.min.js`, `leathash-asmjs.min.js.mem` and `leat-mine.min.js` on your server.
 
-3.) Edit `miner.html (m.html on leat.io servers)` (this repository) so that the script tag includes your server's `leat-mine.js` file.
+3.) Edit `miner.html (m.html on leat.io servers)` (this repository) so that the script tag includes your server's `leat-mine.min.js` file.
 ```html
 // In my case its
-<script src="https://leat.io/lib/leat-mine.js"></script>
+<script src="https://leat.io/lib/leat-mine.min.js"></script>
 ```
 
 
